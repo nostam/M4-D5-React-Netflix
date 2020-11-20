@@ -1,0 +1,19 @@
+.card {
+  border: 0px;
+  padding: 0;
+  overflow: hidden;
+  box-shadow: 4px 4px 8px black;
+  height: 330px;
+}
+.card-body {
+  translate: 0 -120px;
+  height: 0px;
+}
+.card-title,
+.card-body {
+  visibility: hidden;
+}
+.card:hover .card-title {
+  background-color: rgba(255, 255, 255, 0.75);
+  visibility: visible;
+}
