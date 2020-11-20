@@ -1,13 +1,14 @@
-import React from "react";
-import Home from "./components/Home";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "./App.css";
+import { Modal } from 'react-bootstrap';
+import './App.css';
+import MovieList from './components/MovieList'
+import ModalMovie from './components/ModalMovie'
 
 function App() {
   return (
-    <React.Fragment>
-      <Home />
-    </React.Fragment>
+    <div className="App">
+      <MovieList />
+      <ModalMovie/>
+    </div>
   );
 }
 
