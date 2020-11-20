@@ -1,23 +1,26 @@
 import React from 'react';
-import {ListGroup} from 'react-bootstrap';
+import { ListGroup } from 'react-bootstrap';
+import DeleteForeverIcon from "@material-ui/icons/DeleteForever";
 
-const Comment = (props) =>{
-    return(
-        <ListGroup key={props.keyIndex}>
-        {console.log('key: ', props.keyIndex)}
-            <ListGroup.Item>
-                 <p>
-                    {props.comment} <br />
-                     <span>Rating: {props.rate} out of 5 </span>
-                    <button className='btn-danger' 
-                      style={{position: "relative", float: "right"}}
-                      onClick={props.handleDel}>
-                        x
-                    </button>
-                 </p>
-            </ListGroup.Item>
-        </ListGroup>
-    )
-}
+
+const Comment = ({ comments, handleDel }) => {
+    console.log(comments)
+  return (
+    <ListGroup key={comments._id}>
+      <ListGroup.Item style={{backgroundColor:'black'}}>
+        <p style={{backgroudColor:'black'}}>
+          {comments.comment} <br />
+          <span>Rating: {comments.rate} out of 5 </span>
+          <DeleteForeverIcon
+
+     style={{ position: "relative", float: "right" }}
+            onClick={()=>handleDel(comments._id)}
+          />
+           
+        </p>
+      </ListGroup.Item>
+    </ListGroup>
+  );
+};
 
 export default Comment;
