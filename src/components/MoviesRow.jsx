@@ -47,7 +47,14 @@ export default class MoviesRow extends Component {
         </Row>
         <Row>
           {movies.map((movie) => (
-            <Col xs={12} md={4} xl={3} className="my-4" key={movie.imdbID}>
+            <Col
+              xs={12}
+              md={4}
+              lg={3}
+              xl={2}
+              className="my-4"
+              key={movie.imdbID}
+            >
               <Card style={{ width: "15rem" }}>
                 <a onClick={() => this.props.handleOpenModal(movie.imdbID)}>
                   <Card.Img variant="top" src={movie.Poster} />{" "}
