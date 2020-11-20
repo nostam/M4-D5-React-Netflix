@@ -6,13 +6,16 @@ import MovieList from "./components/MovieList";
 import ModalMovie from "./components/ModalMovie";
 import Footer from "./components/Footer";
 import NavBar from './components/NavBar';
+
 import { Link, Route, Switch } from "react-router-dom";
 import SinlgeMoviePage from "./components/SinlgeMoviePage";
+
 
     
 function App() {
   return (
     <div className="App">
+
        <NavBar />
       <Switch>
         <Route exact path="/">
@@ -26,7 +29,9 @@ function App() {
       </Switch>
       
          <Footer />
+
     </div>
+
   );
 }
 
