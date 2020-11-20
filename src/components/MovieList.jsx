@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Button } from 'react-bootstrap'
 import ModalMovie from './ModalMovie'
 import MoviesRow from './MoviesRow'
+import CommentArea from './CommentArea.jsx';
 
 export default class MovieList extends Component {
   state = {
@@ -27,12 +28,12 @@ export default class MovieList extends Component {
         <MoviesRow handleOpenModal={this.handleOpenModal} query={"Batman"} />
         <MoviesRow handleOpenModal={this.handleOpenModal} query={"Life"} />
         <MoviesRow handleOpenModal={this.handleOpenModal} query={"Harry"} />
-
-        <ModalMovie
-          handleClose={this.handleCloseModal}
-          show={show}
-          currentMovie={[...currentMovie]}
-        />
+    
+          <ModalMovie
+            handleClose={this.handleCloseModal}
+            show={show}
+            currentMovie={[...currentMovie]}
+        ></ModalMovie>
       </div>
     );
   }
