@@ -1,0 +1,12 @@
+#footer {
+  background-color: #141414;
+}
+#footer-col {
+  color: grey;
+}
+
+#footer span {
+  color: grey;
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+}
