@@ -4,24 +4,35 @@ import ModalMovie from './ModalMovie'
 import MoviesRow from './MoviesRow'
 
 export default class MovieList extends Component {
-    state = {
-        show: false
-    }
-    componentDidMount = (movie) => {
-        
-    }
-    handleOpenModal = () => {
-      this.setState({show:true})
+  state = {
+    show: false,
+    currentMovie: [],
   };
-    handleCloseModal = () => {
-      this.setState({show:false})
-  }
-    render() {
-      let {show} = this.state
+  componentDidMount = (movie) => {};
+    handleOpenModal = async (movieId) => {
+    this.setState({ show: true, currentMovie: movieId });
+    };
+    
+    handleCloseModal = () => {  
+    this.setState({ show: false, currentMovie:"" });
+    };
+    
+
+
+
+  render() {
+    let { show, currentMovie } = this.state;
     return (
       <div>
-        <MoviesRow handleOpenModal={this.handleOpenModal} query={'Batman'} />
-        <ModalMovie handleClose={this.handleCloseModal} show={show} />
+        <MoviesRow handleOpenModal={this.handleOpenModal} query={"Batman"} />
+        <MoviesRow handleOpenModal={this.handleOpenModal} query={"Life"} />
+        <MoviesRow handleOpenModal={this.handleOpenModal} query={"Harry"} />
+
+        <ModalMovie
+          handleClose={this.handleCloseModal}
+          show={show}
+          currentMovie={[...currentMovie]}
+        />
       </div>
     );
   }
