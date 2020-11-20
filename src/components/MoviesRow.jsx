@@ -9,8 +9,6 @@ export default class MoviesRow extends Component {
     componentDidMount = async () => {
        await this.fetchMovies(this.props.query)
         console.log(this.state.movies)
-        
-        
     }
 
     fetchMovies = async (q) => {
@@ -34,9 +32,13 @@ let {movies} =this.state
         return (
           <Row>
             {movies.map((movie) => (
-              <Button className="mb-2" onClick={() => this.props.handleOpenModal()}>
-                Open Modal
+              <Button
+                className="mb-2"
+                onClick={() => this.props.handleOpenModal(movie.imdbID)}
+              >
+                {movie.Title}
               </Button>
+              
             ))}
           </Row>
         );
