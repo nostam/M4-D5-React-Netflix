@@ -14,10 +14,26 @@ class footer extends React.Component {
       <Container id="footer" fluid>
         <Col md={{ span: 8, offset: 2 }}>
           <Row id="footer-sns" className={"py-2"}>
-            <FacebookIcon style={{ color: "#3b5998" }} fontSize="large" />
-            <TwitterIcon style={{ color: "#1da1f2" }} fontSize="large" />
-            <InstagramIcon style={{ color: "#e1306c" }} fontSize="large" />
-            <YouTubeIcon style={{ color: "#ff0000" }} fontSize="large" />
+            <FacebookIcon
+              className="mx-1"
+              style={{ color: "#3b5998" }}
+              fontSize="large"
+            />
+            <TwitterIcon
+              className="mx-1"
+              style={{ color: "#1da1f2" }}
+              fontSize="large"
+            />
+            <InstagramIcon
+              className="mx-1"
+              style={{ color: "#e1306c" }}
+              fontSize="large"
+            />
+            <YouTubeIcon
+              className="mx-1"
+              style={{ color: "#ff0000" }}
+              fontSize="large"
+            />
           </Row>
           <Row id="footer-col">
             <Col xs={6} md={3}>
