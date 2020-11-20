@@ -41,7 +41,7 @@ export default class MoviesRow extends Component {
     return (
       <Row className="my-4 mx-4 no-gutters">
         <Row>
-          <h3 className="movieRowTitle text-capitalize text-white">
+          <h3 className="mx-3 movieRowTitle text-capitalize text-white">
             {this.props.query}
           </h3>
         </Row>
@@ -59,14 +59,6 @@ export default class MoviesRow extends Component {
                 <a onClick={() => this.props.handleOpenModal(movie.imdbID)}>
                   <Card.Img variant="top" src={movie.Poster} />{" "}
                 </a>
-                <Card.Body>
-                  <Card.Title>
-                    {movie.Title} ({movie.Year})
-                  </Card.Title>
-                </Card.Body>
-                {/* <Card.Footer style={{ textAlign: "end" }}>
-                ASIN: {b.asin}
-              </Card.Footer> */}
               </Card>
             </Col>
           ))}
