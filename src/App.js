@@ -5,6 +5,7 @@ import MovieList from "./components/MovieList";
 import ModalMovie from "./components/ModalMovie";
 import Footer from "./components/Footer";
 import NavBar from './components/NavBar';
+import Cards from './components/Cards'
     
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <NavBar />
       <MovieList />
       <ModalMovie />
+      <Cards />
       <Footer />
     </div>
 
