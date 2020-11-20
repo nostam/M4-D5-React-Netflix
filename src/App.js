@@ -4,8 +4,8 @@ import "./App.css";
 import MovieList from "./components/MovieList";
 import ModalMovie from "./components/ModalMovie";
 import Footer from "./components/Footer";
-import NavBar from './components/NavBar';
-    
+import NavBar from "./components/NavBar";
+
 function App() {
   return (
     <div className="App">
@@ -14,7 +14,6 @@ function App() {
       <ModalMovie />
       <Footer />
     </div>
-
   );
 }
 
