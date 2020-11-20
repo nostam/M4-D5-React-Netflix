@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Modal, Button } from "react-bootstrap";
+import CommentArea from './CommentArea.jsx';
 
 
 
@@ -49,8 +50,12 @@ export default class ModalMovie extends Component {
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>{currentMovie?.Title}</Modal.Title>
+          
         </Modal.Header>
-        <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+        <Modal.Body>Woohoo, you're reading this text in a modal! {this.state.currentMovieId}
+          <br />
+           { show && (<CommentArea img={this.currenntMovie?.Poster} asin='tt1756545' />)}
+        </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
             Close
@@ -59,6 +64,7 @@ export default class ModalMovie extends Component {
             Save Changes
           </Button>
         </Modal.Footer>
+        
       </Modal>
     );
   }
