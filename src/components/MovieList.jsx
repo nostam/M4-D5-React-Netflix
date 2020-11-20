@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { Button } from 'react-bootstrap'
 import ModalMovie from './ModalMovie'
 import MoviesRow from './MoviesRow'
-import CommentArea from './CommentArea.jsx';
 
 export default class MovieList extends Component {
   state = {
